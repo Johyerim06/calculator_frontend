@@ -52,7 +52,7 @@ function calculateResult() {
     // `+` 연산자는 URL에서 공백으로 변환되므로 `%2B`로 변경
     let encodedOperator = operator === "+" ? "%2B" : operator;
 
-    fetch(`http://ec2-15-164-99-155.ap-northeast-2.compute.amazonaws.com:8083/calculate?num1=${firstNumber}&num2=${secondNumber}&op=${encodedOperator}`)
+    fetch("https://ec2-15-164-99-155.ap-northeast-2.compute.amazonaws.com:8083/calculate?num1=5&num2=3&op=%2B")
 
         .then(response => response.text())
         .then(data => {
